@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    Thyme leaf 
+   <p th:text="${key}"></p>
+   <table>
+   <tr th:each="ref:${list}"><td th:text="${ref}"></td></tr></table>
+   <form action="food"  method="post"></form>
+   <input type="number" name="FoodItemNo">
+    <input type="text" name="FoodVariety">
+    <input type="submit">
+</body>
+</html>
