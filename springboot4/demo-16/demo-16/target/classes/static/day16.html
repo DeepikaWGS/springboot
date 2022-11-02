@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+    function update(){
+    	var url="http://localhost:8080/update";
+    	var txt=document.getElementId("data").innerHTML;
+    	const xhttp=new XMLHttpRequest();
+    	xhttp.onreadystatechange=function(){
+    		if(this=readyState==4){
+    			var response=this.responseText;
+    			console.log(response);
+    			document.getElementId("data").innerHtml=response;
+    		}
+    	}
+    	url=url+ "/" +txt;
+    	console.log(url);
+    	xhttp.open("DELETE",url + "/" +txt,true);
+    	xhttp.send();
+    }
+</script>
+</head>
+<body>
+    <form action="account" method="get">
+	<input type="number" name="Id"/>
+	<input type="text" name="name"/>
+	<input type="number" name="balance"/>
+	<input type="submit"/>
+</form>
+</body>
+</html>
